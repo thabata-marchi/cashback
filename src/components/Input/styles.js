@@ -11,3 +11,11 @@ export const InputCSS = styled.input`
   margin: 0 0 5px 0;  
   font-size: 12px;
 `
+
+export const TextError = styled.p`
+  color: ${colors.red};
+  font-size: 11px;
+  text-align: left;
+  margin: 0 0 15px 5px;
+  font-style: italic;
+`

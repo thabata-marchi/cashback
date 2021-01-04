@@ -1,6 +1,7 @@
 export const colors = {
   white: "#FFFFFF",
   black: "#000",
+  red: "#e03614",
   gray_light: "#FAFAFA",
   gray_light2: "#F1F1F1",
   blue_light: "#67ade8",
@@ -14,6 +15,7 @@ export const colors = {
   orange: "#fe760d",
   orange_dark: "#c24300",
   gray: "#444444",
+  gray_555: "#555555",
 
   blue_1: "#3656a2",
   blue_2: "#4784c1",

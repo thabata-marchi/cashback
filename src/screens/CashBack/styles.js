@@ -14,9 +14,8 @@ export const Content = styled.div`
     justify-content: center;
   } 
 `
-
 export const Text = styled.h1`
-  color: ${colors.orange};
+  color: ${colors.gray_555};
   font-size: 16px;
   margin-bottom: 20px;
 `

@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useContext, useCallback } from 'react';
+import React, { useRef } from 'react';
+import * as yup from 'yup';
+
 import { Form } from '@unform/web';
 
 import { useHistory } from "react-router-dom";
@@ -13,15 +15,18 @@ import Input from '../../components/Input';
 
 
 const Register = () => {
+  const formRef = useRef(null);
+
   function handleSubmit(data) {
-    console.log(data);
+    console.log(data);  
   }
+
 
   return (
     <Content>
       <Center>
         <Logo src={GrupoBoticario} alt="Logo Grupo Boticário" />
-        <Form onSubmit={handleSubmit}>
+        <Form ref={formRef} onSubmit={handleSubmit}>
           <BoxWhite>
             <Text>Cadastro de novo revendedor</Text>
             <Input name="nome" placeholder="Nome completo" type="text" />
@@ -29,7 +34,7 @@ const Register = () => {
             <Input name="email" placeholder="Email" type="email" />
             <Input name="password" placeholder="Senha" type="password" />
             <Input name="confirmPass" placeholder="Confirmação de senha" type="password" />
-            <ButtonLeft colorText={colors.white} colorButton={linearColor.orange} type="submit">Entrar</ButtonLeft>
+            <ButtonLeft type="submit" formRef={formRef}>Entrar</ButtonLeft>
           </BoxWhite>
         </Form>
       </Center>

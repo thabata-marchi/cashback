@@ -106,6 +106,4 @@ Respostas:
 Já deu para notar que eu amo design também neh? rs...
 As telas foram desenhadas com todo carinho, utilizando linear no bg e seguindo as cores do logo 💙
 
-Veja abaixo o resultado final: 
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b851664-8758-455e-9c05-176761d8be89/Captura_de_Tela_2021-01-11_as_03.38.26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b851664-8758-455e-9c05-176761d8be89/Captura_de_Tela_2021-01-11_as_03.38.26.png)
+Veja o resultado final neste link: [https://www.notion.so/Telas-Cashback-2fabf70a0ab94077b411eb1b27337f95](https://www.notion.so/Telas-Cashback-2fabf70a0ab94077b411eb1b27337f95)

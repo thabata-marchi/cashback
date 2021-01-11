@@ -7,17 +7,17 @@ Foram criadas as seguintes features:
 - Criação de api fake com node e express autenticada. 
 - Criação das telas de: 
     - Login, 
-    - Registro de novo usuário*, 
-    - Lista de compras do usuário***,
-    - Cadastro de nova compra*,
-    - Visualização do total do cashback**
+    - Registro de novo usuário **, 
+    - Lista de compras do usuário ****,
+    - Cadastro de nova compra **,
+    - Visualização do total do cashback ***
 
 
 ** A api não esta preparada para receber cadastros, por isso, as telas somente são estáticas com os campos validados com Yup.*
 
-** O total do cashback também é um valor estático*
+*** O total do cashback também é um valor estático*
 
-*** Esta tela recebe os dados da API FAKE*
+**** Lista de compras do usuário: Esta tela recebe os dados da API FAKE*
 
 ---
 
@@ -101,6 +101,8 @@ Respostas:
     user: tata@gmail.com
     senha: asd1234@
 ```
+
+---
 
 ### Observação!
 

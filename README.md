@@ -25,7 +25,7 @@ yarn install
 yarn run dev
 ```
 
-Depois rode a api, para que ambas rodem no mesmo local: http://localhost:3000.
+O front irá rodar na porta 3000: http://localhost:3000.
 
 
 ### Para rodar a api
@@ -34,9 +34,12 @@ Para rodar a api, acesse a pasta: cashback/src/api/jwt e execute no terminal:
 node index
 ```
 
-### Rotas da aplicação
+O backend irá rodar na porta 3001: http://localhost:3001.
 
-- ROTA: localhost:3000 (GET)
+
+#### Rotas da aplicação
+
+- ROTA: localhost:3001 (GET)
 s
 Resposta: 
 ```jsx
@@ -45,7 +48,7 @@ Resposta:
 }
 ```
 
-- LOGIN: localhost:3000/login (POST, params: user e pwd)
+- LOGIN: localhost:3001/login (POST, params: user e pwd)
 
 Respostas:
 // Se user e pwd estiverem corretas:
@@ -63,7 +66,7 @@ Respostas:
 }
 ```
 
-- REVENDEDORES: localhost:3000/resellers (GET, token)
+- REVENDEDORES: localhost:3001/resellers (GET, token)
 
 Respostas: 
 

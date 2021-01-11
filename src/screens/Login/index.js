@@ -12,6 +12,9 @@ import { Center, BoxWhite, Logo, Plinks, Menu } from '../../assets';
 import ButtonLeft from '../../components/Buttons/ButtonLeft';
 import Input from '../../components/Input';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
   const history = useHistory();
   const globalStore = useContext(store);
@@ -68,7 +71,16 @@ const Login = () => {
       }
 
     } catch (e){
-      console.log(e); 
+      console.log(e);   
+      toast.dark("🦄  Ops! Deu ruim :( Tente novamente, por favor.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });   
     }
   },[token, history, saveToken, setToken])
 
@@ -86,6 +98,7 @@ const Login = () => {
             <ButtonLeft type="submit">Entrar</ButtonLeft>
           </BoxWhite>
         </Form>
+        <ToastContainer />
       </Center>
     </Content>
   );

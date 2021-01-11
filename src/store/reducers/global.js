@@ -1,17 +1,24 @@
 export const globalReducer = (state, action) => {
   switch (action.type) {
-    case 'WINNER_DATA':
+    case 'SET_TOKEN':
       return {
         ...state,
-        dataWinner: action.dataWinner,
+        token: action.token,
       };
 
-    case 'LOAD':
+    case 'SET_USERNAME':
       return {
         ...state,
-        loading: action.loading,
-      };  
+        username: action.username,
+      };    
+
+    case 'SET_PASSWORD':
+      return {
+        ...state,
+        password: action.pwd,
+      };    
   
+
     default:
       return state;
   }

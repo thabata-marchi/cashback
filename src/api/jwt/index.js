@@ -1,4 +1,5 @@
-//index.js
+const cors = require('cors');
+
 require("dotenv-safe").config();
 var fs = require('fs');
 const jwt = require('jsonwebtoken');
@@ -10,17 +11,19 @@ const app = express();
 const blacklist = [];
 
 const bodyParser = require('body-parser');
+
+app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/', (req, res, next) => {
+app.get('/', cors(), (req, res, next) => {
   res.json({ message: "Tudo ok por aqui!" });
 })
 
-app.get('/resellers', verifyJWT, (req, res, next) => {
+app.get('/resellers', cors(), verifyJWT, (req, res, next) => {
   console.log("Retornou todos os revendedores!");
   var response;
 
-  fs.readFile('db.json', 'utf8', function(err, data){
+  fs.readFile('./db.json', 'utf8', function(err, data){
     if (err) {
       response = {status: 'falha', resultado: err};
       res.json(response);
@@ -50,7 +53,7 @@ function verifyJWT(req, res, next) {
   });
 }
 
-app.post('/login', (req, res, next) => {
+app.post('/login', cors(), (req, res, next) => {
 
   console.log("process.env.SECRET", process.env.SECRET);
   console.log("userId", req.query.user, req.query.pwd);
@@ -69,11 +72,11 @@ app.post('/login', (req, res, next) => {
 
 })
 
-app.post('/logout', function (req, res) {
+app.post('/logout', cors(), function (req, res) {
   blacklist.push(req.headers['x-access-token']);
   res.json({ auth: false, token: null });
 })
 
 const server = http.createServer(app);
-server.listen(3000);
-console.log("Servidor escutando na porta 3000...")
+server.listen(3001);
+console.log("Servidor escutando na porta 3001...")

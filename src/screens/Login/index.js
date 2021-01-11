@@ -1,17 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useState, useContext, useRef, useCallback } from 'react';
 import * as Yup from 'yup';
 
+import { store } from '../../store';
+import api from '../../api/api';
+
 import { Form } from '@unform/web';
-//import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import GrupoBoticario from '../../assets/images/logo-grupo.png';
 import { Content } from './styles';
-import { Center, BoxWhite, Logo } from '../../assets';
+import { Center, BoxWhite, Logo, Plinks, Menu } from '../../assets';
 import ButtonLeft from '../../components/Buttons/ButtonLeft';
 import Input from '../../components/Input';
 
-
 const Login = () => {
+  const history = useHistory();
+  const globalStore = useContext(store);
+  const { setToken, token } = globalStore;
   const inputRef = useRef(null);
+  
+  const [saveToken, setSaveToken] = useState(token);
+  console.log(token);
 
   const handleSubmit = async (data) => {
     try {
@@ -33,7 +41,7 @@ const Login = () => {
         abortEarly: false,
       });
 
-      authLogin(data);
+      connectAuth(data);
 
     } catch(err){
       const errorMessages = {};
@@ -48,15 +56,21 @@ const Login = () => {
     }  
   };
   
-
-  const authLogin = (data) => {
+  const connectAuth = useCallback(async (data) => {
     const {email, password} = data;
+    try {
+      const response = await api.AuthLogin(email, password);
+      setToken(response.data.token);      
+      setSaveToken(token);
 
-    console.log("EBAA! Funcionou!", email, password);
+      if (response.status === 200) {
+        if(token === saveToken) return history.push("/list-purchases") 
+      }
 
-  } 
-
-
+    } catch (e){
+      console.log(e); 
+    }
+  },[token, history, saveToken, setToken])
 
   return (
     <Content>
@@ -64,6 +78,9 @@ const Login = () => {
         <Logo src={GrupoBoticario} alt="Logo Grupo Boticário" />
         <Form ref={inputRef} onSubmit={handleSubmit}>
           <BoxWhite>
+            <Menu>
+              <Link to="/register"><Plinks>Cadastre-se</Plinks></Link>         
+            </Menu>                      
             <Input name="email" type="email" label="E-mail" placeholder={"seuemail@empresa.com.br"} />
             <Input name="password" type="password" label="Senha" placeholder={"*******"} />
             <ButtonLeft type="submit">Entrar</ButtonLeft>

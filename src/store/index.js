@@ -8,5 +8,3 @@ export const StateProvider = ({ children }) => {
   const { globalDispatch } = GlobalActions();
   return <Provider value={globalDispatch}>{children}</Provider>;
 };  
- 
-export default{ store, StateProvider};

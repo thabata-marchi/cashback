@@ -3,7 +3,7 @@ import Routes from './routes';
 
 import { StateProvider } from "./store/";
 
-function App() {
+function App() {  
   return (
     <StateProvider>
       <Routes />

@@ -34,7 +34,7 @@ export const colors = {
 
 export const linearColor = {
   blue: `linear-gradient(to right, ${colors.blue_1} 0%, ${colors.blue_2} 40%, ${colors.blue_3} 100%)`,
-  green: `linear-gradient(to left, ${colors.green_1} 0%, ${colors.green_2} 38%, ${colors.green_3} 100%)`,
+  green: `linear-gradient(to left, ${colors.green_1} 0%, ${colors.green_2} 120%, ${colors.green_3} 100%)`,
   orange: `linear-gradient(to left, ${colors.orange_1} 0%, ${colors.orange_2} 40%, ${colors.orange_3} 100%)`,
 
 }

@@ -7,15 +7,21 @@ const GlobalActions = () => {
   const [state, dispatch] = useReducer(globalReducer, initialState);
 
   const globalDispatch = {
-    dataWinner: state.dataWinner,
-    loading: state.loading,
+    token: state.token,
+    username: state.username,
+    pwd: state.pwd,
 
-    setData: (dataWinner) => {
-      dispatch({ type: "WINNER_DATA", dataWinner });
+    setToken: (token) => {
+      console.log("TO NO STORE", token);
+      dispatch({ type: "SET_TOKEN", token: token });
     },
 
-    setLoad: (loading) => {
-      dispatch({ type: "LOAD", loading });
+    setUsername: (username) => {
+      dispatch({ type: "SET_USERNAME", username: username });
+    },
+
+    setPassword: (pwd) => {
+      dispatch({ type: "SET_PASSWORD", pwd: pwd });
     },
 
   };

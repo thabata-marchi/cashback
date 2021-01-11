@@ -1,6 +1,7 @@
 # App Cashback
 
 Este repo se trata de um desafio frontend, onde crio uma aplicação de cashback. 
+
 Foram criadas as seguintes features: 
 
 - Criação de api fake com node e express autenticada. 
@@ -11,11 +12,14 @@ Foram criadas as seguintes features:
     - Cadastro de nova compra*,
     - Visualização do total do cashback**
 
+
 ** A api não esta preparada para receber cadastros, por isso, as telas somente são estáticas com os campos validados com Yup.*
 
 ** O total do cashback também é um valor estático*
 
 *** Esta tela recebe os dados da API FAKE*
+
+---
 
 ## Rodando a aplicação
 Primeiro rode a aplicação seguindo o passo a passo abaixo: 

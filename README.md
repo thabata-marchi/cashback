@@ -29,7 +29,7 @@ O front irá rodar na porta 3000: http://localhost:3000.
 
 
 ### Para rodar a api
-Para rodar a api, acesse a pasta: cashback/src/api/jwt e execute no terminal: 
+Acesse a pasta: cashback/src/api/jwt e execute no terminal: 
 ```jsx
 node index
 ```
@@ -98,10 +98,12 @@ Respostas:
 ### Observação!
 
 - Esta aplicação foi a primeira experiência que tive com backend 🤗
-- Dessa forma, não consegui criar a parte de cadastro da api por falta de conhecimento :(, porém, logo mais vou fazer um novo commit com esta parte, assim que eu aprender a fazer a parte de cadastro na api =) 
-- Estudei para este desafio e aprendi a criar a "api fake" em um final de semana, por isso, peço desculpas se o código backend não estiver muito bom 🙈
+- Dessa forma, não consegui criar a parte de cadastro da api por falta de conhecimento :(
+- Logo mais vou fazer um novo commit com esta parte, assim que eu aprender a criar o cadastro na api =) 
+- Estudei como fazer uma api fake para este desafio em um final de semana, por isso, peço desculpas se o código backend não estiver muito bom 🙈
 - Amei realizar este desafio!!! 👩‍💻💙
-- Agora vou decolar, com estudos sobre NODE, EXPRESS, TDD. Vou desvendar os mistérios do BACKEND uhuuulll!!!! 🚀
+- Agora vou decolar 🚀  continuando com estudos sobre NODE, EXPRESS, TDD e muito mais 🤗
+- Vou desvendar os mistérios do BACKEND uhuuulll!!!! 🚀
 
 
 ### Telas do projeto

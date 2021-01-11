@@ -7,12 +7,13 @@ Foram criadas as seguintes features:
 - Criação das telas de: 
     - Login, 
     - Registro de novo usuário*, 
-    - Lista de compras do usuário,
+    - Lista de compras do usuário***,
     - Cadastro de nova compra*,
     - Visualização do total do cashback**
 
 * A api não esta preparada para receber cadastros, por isso, as telas somente são estáticas com os campos validados com Yup.
 ** O total do cashback também é um valor estático
+*** Esta tela recebe os dados da API FAKE
 
 ## Rodando a aplicação
 Primeiro rode a aplicação seguindo o passo a passo abaixo: 

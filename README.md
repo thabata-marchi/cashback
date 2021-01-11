@@ -47,8 +47,7 @@ O backend irá rodar na porta 3001: http://localhost:3001.
 #### Rotas da aplicação
 
 - ROTA: localhost:3001 (GET)
-s
-Resposta: 
+
 ```jsx
 {
     "message": "Tudo ok por aqui!"
@@ -57,8 +56,7 @@ Resposta:
 
 - LOGIN: localhost:3001/login (POST, params: user e pwd)
 
-Respostas:
-// Se user e pwd estiverem corretas:
+Se user e pwd estiverem corretas:
 ```jsx
 {
     "auth": true,
@@ -66,7 +64,7 @@ Respostas:
 }
 ```
 
-// Se user e senha estiverem incorreto: 
+Se user e senha estiverem incorreto: 
 ```jsx
 {
     "message": "Login inválido!"
@@ -75,9 +73,7 @@ Respostas:
 
 - REVENDEDORES: localhost:3001/resellers (GET, token)
 
-Respostas: 
-
-// Se token estiver expirado ou for inválido: 
+Se token estiver expirado ou for inválido: 
 ```jsx
 {
     "auth": false,
@@ -85,8 +81,7 @@ Respostas:
 }
 ```
 
-
-// Se token estiver ok:
+Se token estiver ok:
 ```jsx
 {
   "status": "sucesso",
